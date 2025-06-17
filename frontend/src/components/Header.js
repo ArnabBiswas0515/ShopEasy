@@ -95,14 +95,16 @@ const Header = () => {
                     {
                         menuDisplay && (
                             <div className='absolute bg-white bottom-0 top-11 h-fit p-3 shadow-lg rounded hidden md:block'>
-                                <nav>
+                                <nav className='flex-col'>
                                     {
                                         user?.role === ROLE.ADMIN && (
-                                            <Link to={"/admin-panel/all-products"} className='whitespace-nowrap  hover:bg-cyan-100 p-2 rounded-md'onClick={()=>setMenuDisplay(preve => !preve)}>
+                                            <Link to={"/admin-panel/all-products"} className='whitespace-nowrap  hover:bg-cyan-100 p-2 rounded-md' onClick={()=>setMenuDisplay(preve => !preve)}>
                                                 Admin Panel
                                             </Link>
                                         )
                                     }
+
+                                    <Link to={'/order'} className='whitespace-nowrap  hover:bg-cyan-100 p-2 rounded-md' onClick={()=>setMenuDisplay(preve => !preve)}>Orders</Link>
                                 </nav>
                             </div>
                         )
