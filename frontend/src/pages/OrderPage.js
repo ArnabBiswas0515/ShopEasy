@@ -68,8 +68,8 @@ const OrderPage = () => {
                     <div className='flex flex-col gap-4 p-2 min-w-[300px]'>
                       <div>
                         <div className='text-lg font-medium'>Payment Details : </div>
-                        <p className='ml-1 italic'>Payment Method : {item.productDetails.payment_method_type}</p>
-                        <p className='ml-1 italic'>Payment Status : {item.productDetails.payment_status}</p>
+                        <p className='ml-1 italic'>Payment Method : {item.paymentDetails.payment_method_type[0]}</p>
+                        <p className='ml-1 italic'>Payment Status : {item.paymentDetails.payment_status}</p>
                       </div>
                       <div>
                         <div className='text-lg font-medium'>Shipping Details :</div>
